@@ -1,20 +1,135 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 
-export default function HeroSection() {
-  const [email, setEmail] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle email submission here
-    console.log('Email submitted:', email);
-  };
+export default function HeroSection() {
+
 
   return (
-    <section className="pt-20" style={{background: 'linear-gradient(90deg, #006e88, #13b499)'}}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="" style={{background: 'linear-gradient(90deg, #006e88, #13b499)'}}>
+      {/* Background */}
+      <div className="relative w-full h-[540px] md:h-[800px] lg:h-screen">
+        <Image 
+          src="/hero.jpg" 
+          alt="Hero Background" 
+          fill
+          className="object-contain object-top"
+          priority
+        />
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0">
+          {/* Left top side graphics */}
+          <div className="absolute left-0 top-0 w-1/3 h-full">
+            <div className="relative w-full h-full">
+              {/* Floating circles */}
+              <div className="absolute top-20 left-8 w-16 h-16 bg-blue-500/20 rounded-full animate-pulse"></div>
+              <div className="absolute top-40 left-16 w-8 h-8 bg-cyan-400/30 rounded-full animate-bounce"></div>
+              <div className="absolute top-60 left-12 w-12 h-12 bg-teal-500/25 rounded-full animate-pulse delay-1000"></div>
+              
+              {/* Geometric shapes */}
+              <div className="absolute top-32 left-4 w-6 h-6 bg-gradient-to-br from-blue-400 to-cyan-300 transform rotate-45 animate-spin"></div>
+              <div className="absolute top-80 left-20 w-4 h-4 bg-gradient-to-br from-teal-400 to-blue-300 transform rotate-12 animate-pulse delay-500"></div>
+              
+              {/* Lines */}
+              <div className="absolute top-24 left-6 w-20 h-0.5 bg-linear-to-r from-blue-400 to-transparent transform -rotate-12"></div>
+              <div className="absolute top-72 left-10 w-16 h-0.5 bg-linear-to-r from-cyan-400 to-transparent transform rotate-12"></div>
+            </div>
+          </div>
+          {/* Left middle side graphics - Hidden on desktop */}
+          <div className="absolute left-0 top-100 w-1/3 h-full hidden lg:block">
+            <div className="relative w-full h-full">
+              {/* Floating circles */}
+              <div className="absolute top-20 left-8 w-16 h-16 bg-blue-500/20 rounded-full animate-pulse"></div>
+              <div className="absolute top-40 left-16 w-8 h-8 bg-cyan-400/30 rounded-full animate-bounce"></div>
+              <div className="absolute top-60 left-12 w-12 h-12 bg-teal-500/25 rounded-full animate-pulse delay-1000"></div>
+              
+              {/* Geometric shapes */}
+              <div className="absolute top-32 left-4 w-6 h-6 bg-gradient-to-br from-blue-400 to-cyan-300 transform rotate-45 animate-spin"></div>
+              <div className="absolute top-80 left-20 w-4 h-4 bg-gradient-to-br from-teal-400 to-blue-300 transform rotate-12 animate-pulse delay-500"></div>
+              
+              {/* Lines */}
+              <div className="absolute top-24 left-6 w-20 h-0.5 bg-linear-to-r from-blue-400 to-transparent transform -rotate-12"></div>
+              <div className="absolute top-72 left-10 w-16 h-0.5 bg-linear-to-r from-cyan-400 to-transparent transform rotate-12"></div>
+            </div>
+          </div>
+
+          {/* Left bottom side graphics */}
+          <div className="absolute left-0 top-200 w-1/3 h-full">
+            <div className="relative w-full h-full">
+              {/* Floating circles */}
+              <div className="absolute top-20 left-8 w-16 h-16 bg-blue-500/20 rounded-full animate-pulse"></div>
+              <div className="absolute top-40 left-16 w-8 h-8 bg-cyan-400/30 rounded-full animate-bounce"></div>
+              <div className="absolute top-60 left-12 w-12 h-12 bg-teal-500/25 rounded-full animate-pulse delay-1000"></div>
+              
+              {/* Geometric shapes */}
+              <div className="absolute top-32 left-4 w-6 h-6 bg-gradient-to-br from-blue-400 to-cyan-300 transform rotate-45 animate-spin"></div>
+              <div className="absolute top-80 left-20 w-4 h-4 bg-gradient-to-br from-teal-400 to-blue-300 transform rotate-12 animate-pulse delay-500"></div>
+              
+              {/* Lines */}
+              <div className="absolute top-24 left-6 w-20 h-0.5 bg-linear-to-r from-blue-400 to-transparent transform -rotate-12"></div>
+              <div className="absolute top-72 left-10 w-16 h-0.5 bg-linear-to-r from-cyan-400 to-transparent transform rotate-12"></div>
+            </div>
+          </div>
+
+          {/* Right side graphics */}
+          <div className="absolute right-0 top-0 w-1/3 h-full">
+            <div className="relative w-full h-full">
+              {/* Floating circles */}
+              <div className="absolute top-16 right-12 w-20 h-20 bg-green-500/20 rounded-full animate-pulse delay-300"></div>
+              <div className="absolute top-48 right-8 w-10 h-10 bg-emerald-400/30 rounded-full animate-bounce delay-700"></div>
+              <div className="absolute top-72 right-16 w-14 h-14 bg-teal-500/25 rounded-full animate-pulse delay-1500"></div>
+              
+              {/* Geometric shapes */}
+              <div className="absolute top-28 right-6 w-8 h-8 bg-gradient-to-br from-green-400 to-emerald-300 transform -rotate-45 animate-spin delay-1000"></div>
+              <div className="absolute top-64 right-12 w-6 h-6 bg-gradient-to-br from-teal-400 to-green-300 transform rotate-45 animate-pulse delay-2000"></div>
+              
+              {/* Lines */}
+              <div className="absolute top-20 right-8 w-24 h-0.5 bg-linear-to-l from-green-400 to-transparent transform rotate-12"></div>
+              <div className="absolute top-68 right-12 w-18 h-0.5 bg-linear-to-l from-emerald-400 to-transparent transform -rotate-12"></div>
+            </div>
+          </div>
+          {/* Right middle side graphics - Hidden on desktop */}
+          <div className="absolute right-0 top-100 w-1/3 h-full hidden lg:block">
+            <div className="relative w-full h-full">
+              {/* Floating circles */}
+              <div className="absolute top-16 right-12 w-20 h-20 bg-green-500/20 rounded-full animate-pulse delay-300"></div>
+              <div className="absolute top-48 right-8 w-10 h-10 bg-emerald-400/30 rounded-full animate-bounce delay-700"></div>
+              <div className="absolute top-72 right-16 w-14 h-14 bg-teal-500/25 rounded-full animate-pulse delay-1500"></div>
+              
+              {/* Geometric shapes */}
+              <div className="absolute top-28 right-6 w-8 h-8 bg-gradient-to-br from-green-400 to-emerald-300 transform -rotate-45 animate-spin delay-1000"></div>
+              <div className="absolute top-64 right-12 w-6 h-6 bg-gradient-to-br from-teal-400 to-green-300 transform rotate-45 animate-pulse delay-2000"></div>
+              
+              {/* Lines */}
+              <div className="absolute top-20 right-8 w-24 h-0.5 bg-linear-to-l from-green-400 to-transparent transform rotate-12"></div>
+              <div className="absolute top-68 right-12 w-18 h-0.5 bg-linear-to-l from-emerald-400 to-transparent transform -rotate-12"></div>
+            </div>
+          </div>
+          {/* Right bottom side graphics */}
+          <div className="absolute right-0 top-200 w-1/3 h-full">
+            <div className="relative w-full h-full">
+              {/* Floating circles */}
+              <div className="absolute top-16 right-12 w-20 h-20 bg-green-500/20 rounded-full animate-pulse delay-300"></div>
+              <div className="absolute top-48 right-8 w-10 h-10 bg-emerald-400/30 rounded-full animate-bounce delay-700"></div>
+              <div className="absolute top-72 right-16 w-14 h-14 bg-teal-500/25 rounded-full animate-pulse delay-1500"></div>
+              
+              {/* Geometric shapes */}
+              <div className="absolute top-28 right-6 w-8 h-8 bg-gradient-to-br from-green-400 to-emerald-300 transform -rotate-45 animate-spin delay-1000"></div>
+              <div className="absolute top-64 right-12 w-6 h-6 bg-gradient-to-br from-teal-400 to-green-300 transform rotate-45 animate-pulse delay-2000"></div>
+              
+              {/* Lines */}
+              <div className="absolute top-20 right-8 w-24 h-0.5 bg-linear-to-l from-green-400 to-transparent transform rotate-12"></div>
+              <div className="absolute top-68 right-12 w-18 h-0.5 bg-linear-to-l from-emerald-400 to-transparent transform -rotate-12"></div>
+            </div>
+          </div>
+        </div>
+
+
+        
+      </div>
+      {/* Content */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 md:pt-20 lg:pt-32">
         <div className="text-center">
           {/* Main Title */}
           <h1 className="text-6xl md:text-7xl lg:text-8xl prompt-black text-white mb-6 tracking-tight">
@@ -119,13 +234,17 @@ export default function HeroSection() {
 
           {/* CTA Button */}
           <div className="mt-12 mb-12">
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-16 py-6 rounded-full text-2xl kanit-black transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105">
+            <a 
+              href="https://docs.google.com/forms/d/e/1FAIpQLScqT2WPNW68F7ChWnv-f5Cho3pT6YjW_xWKl4lZpWSaA7Ac0Q/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-16 py-6 rounded-full text-2xl kanit-black transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105"
+            >
               ลงทะเบียนเรียนฟรี
-            </button>
+            </a>
           </div>
         </div>
       </div>
-
       {/* What You Will Get Section */}
       <div className="bg-white py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
