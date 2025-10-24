@@ -11,7 +11,7 @@ export default function HeroSection() {
       {/* Background */}
       <div className="relative w-full h-[540px] md:h-[800px] lg:h-screen">
         <Image 
-          src="/hero.jpg" 
+          src="/hero_1.jpg" 
           alt="Hero Background" 
           fill
           className="object-contain object-top"
@@ -209,9 +209,11 @@ export default function HeroSection() {
                 <Image
                   src="/n8n.jpg"
                   alt="n8n Logo"
-                  width={96}
-                  height={48}
-                  className="w-24 h-12"
+                  width={240}
+                  height={120}
+                  className="w-32 h-16 object-contain"
+                  quality={100}
+                  priority
                 />
                 {/* <span className="text-2xl prompt-bold text-black">n8n</span> */}
               </div>
@@ -223,9 +225,11 @@ export default function HeroSection() {
                 <Image
                   src="/make.png"
                   alt="make Logo"
-                  width={96}
-                  height={48}
-                  className="w-24 h-12"
+                  width={240}
+                  height={120}
+                  className="w-32 h-16 object-contain"
+                  quality={100}
+                  priority
                 />
                 {/* <span className="text-2xl prompt-bold text-black">make</span> */}
               </div>
